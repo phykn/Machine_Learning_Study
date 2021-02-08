@@ -7,8 +7,7 @@ $$
 
 | Term                                             | Description                                                  |
 | :----------------------------------------------- | :----------------------------------------------------------- |
-| <img src="https://render.githubusercontent.com/render/math?math=s_{t}">
-                                          | 시간 $t$ 에서 상태 (state)                                   |
+| <img src="https://render.githubusercontent.com/render/math?math=s_{t}"> | 시간 $t$ 에서 상태 (state)                                   |
 | $a_{t}$                                          | 시간 $t$ 에서 행동 (action)                                  |
 | $Q(s_{t}, a_{t})$                                | 주어진 상태 $s_{t}$ 에서 행동 $a_{t}$ 의 기대 Return (Reward) |
 | $\alpha$                                         | 학습률 $(0 < \alpha \leqq 1)$                                |
