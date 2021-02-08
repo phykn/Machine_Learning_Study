@@ -20,6 +20,7 @@ $$
 #####  | $\epsilon-$greedy 
 새로운 행동을 찾기 위한 무작위 선택 $(0 \leqq \epsilon \leqq 1)$
 
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 
 
 ##### | Markov Decision Process
