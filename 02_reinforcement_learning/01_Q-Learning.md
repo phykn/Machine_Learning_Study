@@ -5,6 +5,7 @@ $$
 Q(s_{t}, a_{t}) \leftarrow (1-\alpha) \cdot \underbrace{Q(s_{t}, a_{t})}_{\mathrm{old\;value}}+\underbrace{\alpha}_{\mathrm{learning\;rate}} \cdot \left( \overbrace{ \underbrace{r_{t}}_{\mathrm{reward}} + \underbrace{\gamma}_{\mathrm{discount\;factor}} \cdot \underbrace{\underset{a_{t+1}}{\rm{max}} Q(s_{t+1}, a_{t+1})}_{\mathrm{estimate\;of\;optimal\;future\;value}} }^{\mathrm{learned\;value}} \right )
 $$
 
+![](https://latex.codecogs.com/gif.latex?s_{t})
 | Term                                             | Description                                                  |
 | :----------------------------------------------- | :----------------------------------------------------------- |
 | <img src="https://render.githubusercontent.com/render/math?math=s_{t}"> | 시간 <img src="https://render.githubusercontent.com/render/math?math=t"> 에서 상태 (state) |
@@ -19,7 +20,7 @@ $$
 
 #####  | $\epsilon-$greedy 
 새로운 행동을 찾기 위한 무작위 선택 $(0 \leqq \epsilon \leqq 1)$
-
+https://latex.codecogs.com/gif.latex?%280%20%5Cleqq%20%5Cepsilon%20%5Cleqq%201%29
 
 
 ##### | Markov Decision Process
