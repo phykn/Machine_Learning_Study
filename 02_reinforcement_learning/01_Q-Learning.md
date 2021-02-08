@@ -10,8 +10,8 @@ $$
 | ![](https://latex.codecogs.com/gif.latex?s_{t}) | 시간 ![](https://latex.codecogs.com/gif.latex?t) 에서 상태 (state)                                   |
 | ![](https://latex.codecogs.com/gif.latex?a_{t}) | 시간 ![](https://latex.codecogs.com/gif.latex?t) 에서 행동 (action)                                  |
 | ![](https://latex.codecogs.com/gif.latex?Q(s_{t},%20a_{t})) | 주어진 상태 ![](https://latex.codecogs.com/gif.latex?s_{t}) 에서 행동 ![](https://latex.codecogs.com/gif.latex?a_{t}) 의 기대 Return (Reward) |
-| $\alpha$                                         | 학습률 $(0 < \alpha \leqq 1)$                                |
-| $r_{t}$                                          | $a_{t}$ 에 의한 보상                                         |
+| ![](https://latex.codecogs.com/gif.latex?\alpha) | 학습률 ![](https://latex.codecogs.com/gif.latex?(0 < \alpha \leqq 1)) |
+| ![](https://latex.codecogs.com/gif.latex?r_{t}) | ![](https://latex.codecogs.com/gif.latex?a_{t}) 에 의한 보상                                         |
 | $\gamma$                                         | 보상의 감소율 $(0 \leqq \gamma \leqq 1)$                     |
 | $\underset{a_{t+1}}{\rm{max}}Q(s_{t+1},a_{t+1})$ | $Q$ 가 최대가 되는 $a_{t+1}$ 을 선택 (Greedy action)         |
 
