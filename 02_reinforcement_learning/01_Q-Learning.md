@@ -8,33 +8,30 @@
 | ![](https://latex.codecogs.com/gif.latex?s_{t})              | 시간 ![](https://latex.codecogs.com/gif.latex?t) 에서 상태 (state) |
 | ![](https://latex.codecogs.com/gif.latex?a_{t})              | 시간 ![](https://latex.codecogs.com/gif.latex?t) 에서 행동 (action) |
 | ![](https://latex.codecogs.com/gif.latex?Q(s_{t},%20a_{t}))  | 주어진 상태 ![](https://latex.codecogs.com/gif.latex?s_{t}) 에서 행동 ![](https://latex.codecogs.com/gif.latex?a_{t}) 의 기대 Return (Reward) |
-| ![](https://latex.codecogs.com/gif.latex?\alpha)             | 학습률 ![](https://latex.codecogs.com/gif.latex?(0 < \alpha \leqq 1)) |
+| ![](https://latex.codecogs.com/gif.latex?\alpha)             | 학습률 ![](https://latex.codecogs.com/gif.latex?%280%20%3C%20%5Calpha%20%5Cleqq%201%29) |
 | ![](https://latex.codecogs.com/gif.latex?r_{t})              | ![](https://latex.codecogs.com/gif.latex?a_{t}) 에 의한 보상 |
-| ![](https://latex.codecogs.com/gif.latex?\gamma)             | 보상의 감소율 ![](https://latex.codecogs.com/gif.latex?(0 \leqq \gamma \leqq 1)) |
+| ![](https://latex.codecogs.com/gif.latex?\gamma)             | 보상의 감소율 ![](https://latex.codecogs.com/gif.latex?%280%20%5Cleqq%20%5Cgamma%20%5Cleqq%201%29) |
 | ![](https://latex.codecogs.com/gif.latex?\underset{a_{t+1}}{\rm{max}}Q(s_{t+1},a_{t+1})) | ![](https://latex.codecogs.com/gif.latex?Q) 가 최대가 되는 ![](https://latex.codecogs.com/gif.latex?a_{t+1}) 을 선택 (Greedy action) |
 
 
 
 #####  | ![](https://latex.codecogs.com/gif.latex?\epsilon-greedy )
-새로운 행동을 찾기 위한 무작위 선택 ![](https://latex.codecogs.com/gif.latex?(0 \leqq \epsilon \leqq 1))
+새로운 행동을 찾기 위한 무작위 선택 ![](https://latex.codecogs.com/gif.latex?%280%20%5Cleqq%20%5Cepsilon%20%5Cleqq%201%29)
 
 
 
 ##### | Markov Decision Process
 > Property (Policy)
-![](https://latex.codecogs.com/gif.latex?P(a_{t+1}|s_{t}, a_{t}, s_{t+1})=P(a_{t+1}|s_{t+1}))
+![](https://latex.codecogs.com/gif.latex?P%28a_%7Bt&plus;1%7D%7Cs_%7Bt%7D%2C%20a_%7Bt%7D%2C%20s_%7Bt&plus;1%7D%29%3DP%28a_%7Bt&plus;1%7D%7Cs_%7Bt&plus;1%7D%29)
 
 > Property (Transition probability)
-![](https://latex.codecogs.com/gif.latex?P(s_{t+2}|s_{t}, a_{t}, s_{t+1}, a_{t+1})=P(s_{t+2}|s_{t+1}, a_{t+1}))
+![](https://latex.codecogs.com/gif.latex?P%28s_%7Bt&plus;2%7D%7Cs_%7Bt%7D%2C%20a_%7Bt%7D%2C%20s_%7Bt&plus;1%7D%2C%20a_%7Bt&plus;1%7D%29%3DP%28s_%7Bt&plus;2%7D%7Cs_%7Bt&plus;1%7D%2C%20a_%7Bt&plus;1%7D%29)
 
 
 
 ##### | Return: Sum of rewards
 
-![](https://latex.codecogs.com/gif.latex?\begin{aligned}
-G_{t} & \triangleq R_{t} + \gamma R_{t+1} + \gamma^{2} R_{t+2} \\
-& = \sum_{n=0}^{\infty} \gamma^{n} R_{t+n}
-\end{aligned})
+![](https://latex.codecogs.com/gif.latex?%5Cbegin%7Baligned%7D%20G_%7Bt%7D%20%26%20%5Ctriangleq%20R_%7Bt%7D%20&plus;%20%5Cgamma%20R_%7Bt&plus;1%7D%20&plus;%20%5Cgamma%5E%7B2%7D%20R_%7Bt&plus;2%7D%20%5C%5C%20%26%20%3D%20%5Csum_%7Bn%3D0%7D%5E%7B%5Cinfty%7D%20%5Cgamma%5E%7Bn%7D%20R_%7Bt&plus;n%7D%20%5Cend%7Baligned%7D)
 
 ### Reference
 [1] https://ko.wikipedia.org/wiki/Q_%EB%9F%AC%EB%8B%9D
