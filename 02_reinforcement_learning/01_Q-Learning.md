@@ -1,9 +1,9 @@
 ### Q-Learning
 #####  | Q-Learning algorithm [1]
 
-$$
-Q(s_{t}, a_{t}) \leftarrow (1-\alpha) \cdot \underbrace{Q(s_{t}, a_{t})}_{\mathrm{old\;value}}+\underbrace{\alpha}_{\mathrm{learning\;rate}} \cdot \left( \overbrace{ \underbrace{r_{t}}_{\mathrm{reward}} + \underbrace{\gamma}_{\mathrm{discount\;factor}} \cdot \underbrace{\underset{a_{t+1}}{\rm{max}} Q(s_{t+1}, a_{t+1})}_{\mathrm{estimate\;of\;optimal\;future\;value}} }^{\mathrm{learned\;value}} \right )
-$$
+<img src="https://render.githubusercontent.com/render/math?math=Q(s_{t}, a_{t}) \leftarrow (1-\alpha) \cdot \underbrace{Q(s_{t}, a_{t})}_{\mathrm{old\;value}}+\underbrace{\alpha}_{\mathrm{learning\;rate}} \cdot \left( \overbrace{ \underbrace{r_{t}}_{\mathrm{reward}} + \underbrace{\gamma}_{\mathrm{discount\;factor}} \cdot \underbrace{\underset{a_{t+1}}{\rm{max}} Q(s_{t+1}, a_{t+1})}_{\mathrm{estimate\;of\;optimal\;future\;value}} }^{\mathrm{learned\;value}} \right )
+">
+
 
 | Term                                             | Description                                                  |
 | :----------------------------------------------- | :----------------------------------------------------------- |
