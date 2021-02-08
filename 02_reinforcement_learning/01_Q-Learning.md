@@ -10,7 +10,7 @@ $$
 | <img src="https://render.githubusercontent.com/render/math?math=s_{t}"> | 시간 <img src="https://render.githubusercontent.com/render/math?math=t"> 에서 상태 (state) |
 | <img src="https://render.githubusercontent.com/render/math?math=a_{t}"> | 시간 <img src="https://render.githubusercontent.com/render/math?math=t"> 에서 행동 (action) |
 | <img src="https://render.githubusercontent.com/render/math?math=Q(s_{t}, a_{t})"> | 주어진 상태 <img src="https://render.githubusercontent.com/render/math?math=s_{t}"> 에서 행동 <img src="https://render.githubusercontent.com/render/math?math=a_{t}"> 의 기대 Return (Reward) |
-| $\alpha$                                         | 학습률 $(0 < \alpha \leqq 1)$                                |
+| <img src="https://render.githubusercontent.com/render/math?math=\alpha"> | 학습률 $(0 < \alpha \leqq 1)$                                |
 | $r_{t}$                                          | $a_{t}$ 에 의한 보상                                         |
 | $\gamma$                                         | 보상의 감소율 $(0 \leqq \gamma \leqq 1)$                     |
 | $\underset{a_{t+1}}{\rm{max}}Q(s_{t+1},a_{t+1})$ | $Q$ 가 최대가 되는 $a_{t+1}$ 을 선택 (Greedy action)         |
