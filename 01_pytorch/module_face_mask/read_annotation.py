@@ -1,3 +1,4 @@
+import torch
 from bs4 import BeautifulSoup
 
 def get_annotation(file): 
@@ -13,7 +14,7 @@ def get_annotation(file):
         labels.append(get_label(obj))
 
     annotation = {}
-    annotation["bboxes"] = boxes
+    annotation["boxes"] = boxes
     annotation["labels"] = labels
     return annotation
 

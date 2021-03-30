@@ -1,4 +1,6 @@
+import numpy as np
 import cv2
+import torch
 from torch.utils.data import Dataset
 from .read_annotation import get_annotation
         
@@ -18,10 +20,21 @@ class DATASET(Dataset):
 
         image = cv2.imread(image_file)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image_x_max, image_y_max, _ = image.shape 
+        
         annotation = get_annotation(annot_file)      
         
+        # Bounding Box Correction
+        boxes = np.array(annotation['boxes'])
+        boxes[:, 3] = np.where(boxes[:, 3] > image_x_max, image_x_max, boxes[:, 3])
+        boxes[:, 2] = np.where(boxes[:, 2] > image_y_max, image_y_max, boxes[:, 2])
+        annotation['boxes'] = boxes.tolist()
+        
         if self.transform:
-            transformed = self.transform(image=image, bboxes=annotation['bboxes'], labels=annotation['labels'])
+            transformed = self.transform(image=image, bboxes=annotation['boxes'], labels=annotation['labels'])
             image = transformed['image']
-            annotation = {'bboxes':transformed['bboxes'], 'labels':transformed['labels']}            
+            annotation = {
+                'boxes': torch.as_tensor(transformed['bboxes'], dtype=torch.float32),
+                'labels': torch.as_tensor(transformed['labels'], dtype=torch.int64)
+            }            
         return image, annotation

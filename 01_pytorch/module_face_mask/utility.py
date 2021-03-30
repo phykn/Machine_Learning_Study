@@ -5,10 +5,10 @@ def do_plot(image, annotation):
     fig, ax = plt.subplots(1)
     ax.imshow(image)
 
-    bboxes = annotation['bboxes']
+    boxes = annotation['boxes']
     labels = annotation['labels']
-    for bbox, label in zip(bboxes, labels):
-        xmin, ymin, xmax, ymax = bbox
+    for box, label in zip(boxes, labels):
+        xmin, ymin, xmax, ymax = box
         if label == 0:
             rect = patches.Rectangle((xmin, ymin), (xmax-xmin), (ymax-ymin), linewidth=3, edgecolor='r', facecolor='none')
         elif label == 1:
